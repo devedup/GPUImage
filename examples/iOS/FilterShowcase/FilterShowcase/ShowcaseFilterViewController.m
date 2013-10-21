@@ -1545,6 +1545,7 @@
 
 - (IBAction)updateFilterFromSlider:(id)sender;
 {
+    [videoCamera resetBenchmarkAverage];
     switch(filterType)
     {
         case GPUIMAGE_SEPIA: [(GPUImageSepiaFilter *)filter setIntensity:[(UISlider *)sender value]]; break;
